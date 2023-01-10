@@ -12,13 +12,13 @@ scale = c("Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree")
 data <- data.frame(
   q1 = sample(scale, size = 1000, replace = TRUE,
               prob = c(0.07, 0.11, 0.08, 0.28, 0.46)), 
-  q2 = sample(scale, size = 100, replace = TRUE,
+  q2 = sample(scale, size = 1000, replace = TRUE,
               prob = c(0.19, 0.12, 0.11, 0.23, 0.35)),    
-  q3 = sample(scale, size = 100, replace = TRUE,
+  q3 = sample(scale, size = 1000, replace = TRUE,
               prob = c(0.15, 0.25, 0.14, 0.21, 0.25)),  
-  q4 = sample(scale, size = 100, replace = TRUE,
+  q4 = sample(scale, size = 1000, replace = TRUE,
               prob = c(0.38, 0.18, 0.13, 0.16, 0.15)),  
-  q5 = sample(scale, size = 100, replace = TRUE,
+  q5 = sample(scale, size = 1000, replace = TRUE,
               prob = c(0.46, 0.26, 0.07, 0.14, 0.07))
   )
 
@@ -56,7 +56,7 @@ plot(data.summary, type = "bar", centered = FALSE)
   # save as png
 ggsave("2a_justified.png",
        # image size
-       width = 10,
+       width = 8,
        # background colour
        bg='#ffffff')
 
@@ -68,7 +68,7 @@ plot(data.summary,
   # save as png
 ggsave("2b_centered.png",
        # image size
-       width = 10,
+       width = 8,
        # background colour
        bg='#ffffff')
 
@@ -107,6 +107,6 @@ plot(data.summary,
 # save as png
 ggsave("2c_customized.png",
        # image size
-       width = 10,
+       width = 8,
        # background colour
        bg='#ffffff')
